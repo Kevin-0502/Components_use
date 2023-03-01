@@ -1,18 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,SafeAreaView,ScrollView } from 'react-native';
-import Lista from './components/Lista';
-import { ListItem } from 'react-native-elements';
+import { StyleSheet, Text, View } from 'react-native';
+import BottomTab from './components/navigation/BottomTab';
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Text style={styles.text}>List Items</Text>
-      <ScrollView style={styles.scrollstyle}>
-      <Lista/>
-      
-      </ScrollView>
-    </SafeAreaView>
-    
+    <BottomTab/>
   );
 }
 
@@ -20,13 +12,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  text:{
-    fontSize:40,
-    fontWeight:'bold',
-    textAlign:'center',
-  },
-  scrollstyle:{
-    backgroundColor: 'lightblue',
-  }
 });
